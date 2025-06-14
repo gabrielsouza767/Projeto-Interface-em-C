@@ -6,7 +6,7 @@ Desenvolvido para a matéria de Algoritmos e Estruturas de Dados I, primeiro per
 
 O jogo simula uma investigação policial com foco narrativo. Por meio de uma interface gráfica em C, o jogador pode:
 
-- Navegar entre múltiplas telas do jogo com o **mouse** ou **teclas**;
+- Navegar entre múltiplas telas do jogo com o **mouse** ou  as setas do **teclado**;
 - Acessar **fichas de suspeitos** e **testemunhas**;
 - Analisar **evidências visuais** e tomar decisões com base em diálogos e pistas;
 - Progredir na história e descobrir o culpado.

@@ -1,12 +1,12 @@
 # 🔍 Projeto Interface em C - Jogo de Investigação Policial
 
 Este projeto é um jogo investigativo desenvolvido em linguagem C utilizando a biblioteca **C-graphics**. O jogador assume o papel de um detetive, interagindo com personagens e pistas para resolver um mistério.
-Desenvolvido para a matéria de Algoritmos e Estruturas de Dados 1, primeiro periodo.
+Desenvolvido para a matéria de Algoritmos e Estruturas de Dados I, primeiro periodo.
 ## 🎮 Sobre o jogo
 
 O jogo simula uma investigação policial com foco narrativo. Por meio de uma interface gráfica em C, o jogador pode:
 
-- Navegar entre múltiplas telas do jogo com o **mouse**;
+- Navegar entre múltiplas telas do jogo com o **mouse** ou **teclas**;
 - Acessar **fichas de suspeitos** e **testemunhas**;
 - Analisar **evidências visuais** e tomar decisões com base em diálogos e pistas;
 - Progredir na história e descobrir o culpado.

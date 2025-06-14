@@ -255,7 +255,7 @@ void FichaSuspeitos(int alt)
         //Matriz de caracteres, falas correspondentes a cada suspeito, por isso o indice da var "i", e somente ela "linhas" da matriz
         settextstyle(0,HORIZ_DIR,TamFonte2(alt));
         setcolor(0);
-        readimagefile(p[i].img, T.tamLarg * 0.6, T.tamAlt * 0.09, T.tamLarg * 0.74, T.tamAlt * 0.28);
+        readimagefile(p[i].img, T.tamLarg * 0.6, T.tamAlt * 0.093, T.tamLarg * 0.74, T.tamAlt * 0.28);
 //Vetor da struct suspeito, para conseguir rotacionar a img sem disperdicio de código, fiz dela um campo char da struct, alterando a cada loop
         readimagefile("img/wanted.jpg", T.tamLarg * 0.593, T.tamAlt * 0.38, T.tamLarg * 0.703, T.tamAlt * 0.555);
 

@@ -157,6 +157,9 @@ void respostasSuspeitos(int *flag, char *textBot, int alt, int larg, int *h)
         case 4:  //Fala suspeito 5
             outtextxy(larg * 0.52, alt * 0.63, falasSuspeitos[20]);
             outtextxy(larg * 0.52, alt * 0.66, falasSuspeitos[21]);
+            bar(larg * 0.040, alt * 0.851, larg * 0.47, alt * 0.946); // limpa área
+            settextstyle(0, HORIZ_DIR, TamFonte2(alt));
+            outtextxy(larg * 0.055, alt * 0.880, "Vou conversar com uns policiais...");
             break;
         }
         //Volta o conteudo dos botoes para o 2 segundo suspeito

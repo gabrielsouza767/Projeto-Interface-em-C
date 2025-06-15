@@ -22,6 +22,7 @@ O projeto foi estruturado de forma modular, com foco em organização de código
 - Git e GitHub para controle de versão
   ## Um pouco dele funcionando:
 ![Demonstração do jogo](assets/animacao.gif)
-
+![Demonstração do jogo](assets/Falas.gif)
+![Demonstração do jogo](assets/ConversasPt2.gif)
 
 

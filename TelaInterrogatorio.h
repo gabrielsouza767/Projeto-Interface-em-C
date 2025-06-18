@@ -387,7 +387,7 @@ void FichaTestemunhasTela8(int alt,int larg,int *j)
     char idadeint[10],numFichaint[5],numIdint[5];
     struct TamanhoTela T;
     T.tamLarg=getmaxwidth(),T.tamAlt=getmaxheight();
-    Testemunhas t[2]=
+    Testemunhas test[2]=
     {
         {"Alvares Gonzaga","Poços de Caldas-MG","356.780.450-78","(35)93462-9343","img/testemunha.jpg",40,01,0001},
         {"Luan Silva","Poços de Caldas-MG","267.908.678-21","(35)93322-9372","img/testemunha2.jpg",30,02,0002}
@@ -405,16 +405,16 @@ void FichaTestemunhasTela8(int alt,int larg,int *j)
 
 // NOME
         outtextxy(T.tamLarg * 0.02, T.tamAlt * 0.03, "NOME:");
-        outtextxy(T.tamLarg * 0.13, T.tamAlt * 0.03, t[i].nomeTestemunha);
+        outtextxy(T.tamLarg * 0.13, T.tamAlt * 0.03, test[i].nomeTestemunha);
 
 // IDADE
         outtextxy(T.tamLarg * 0.02, T.tamAlt * 0.10, "IDADE:");
-        sprintf(idadeint, "%d", t[i].idade);
+        sprintf(idadeint, "%d", test[i].idade);
         outtextxy(T.tamLarg * 0.13, T.tamAlt * 0.10, idadeint);
 
 // CPF
         outtextxy(T.tamLarg * 0.02, T.tamAlt * 0.17, "CPF:");
-        outtextxy(T.tamLarg * 0.13, T.tamAlt * 0.17, t[i].cpf);
+        outtextxy(T.tamLarg * 0.13, T.tamAlt * 0.17, test[i].cpf);
 
 // Texto da delegacia
         outtextxy(T.tamLarg * 0.02, T.tamAlt * 0.24, "Delegacia civil-MG");
@@ -424,7 +424,7 @@ void FichaTestemunhasTela8(int alt,int larg,int *j)
         settextstyle(0, HORIZ_DIR, TamFonte(alt, &tamFonte));
 
 // Imagem pequena e discreta no canto da ficha
-        readimagefile(t[i].img, T.tamLarg * 0.30, T.tamAlt * 0.01, T.tamLarg * 0.45, T.tamAlt * 0.20);
+        readimagefile(test[i].img, T.tamLarg * 0.30, T.tamAlt * 0.01, T.tamLarg * 0.45, T.tamAlt * 0.20);
         botaoFalaTestemunhas(alt,larg,j);
 // Botão "Próxima Ficha" (dentro do limite do 1/4)
         settextstyle(0, HORIZ_DIR, TamFonte2(alt));

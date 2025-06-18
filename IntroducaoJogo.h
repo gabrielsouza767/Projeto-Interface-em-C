@@ -274,7 +274,7 @@ void FichaTestemunhas(int alt)
     char idadeint[10],numFichaint[5],numIdint[5];
     struct TamanhoTela T;
     T.tamLarg=getmaxwidth(),T.tamAlt=getmaxheight();
-    Testemunhas t[2]=
+    Testemunhas test[2]=
     {
         {"Alvares Gonzaga","Poços de Caldas-MG","356.780.450-78","(35)93462-9343","img/testemunha.jpg",40,01,0001},
         {"Luan Silva","Poços de Caldas-MG","267.908.678-21","(35)93322-9372","img/testemunha2.jpg",30,02,0002}
@@ -297,35 +297,35 @@ void FichaTestemunhas(int alt)
         settextstyle(0,HORIZ_DIR,TamFonte2(alt));
 // NOME
         outtextxy(T.tamLarg * 0.323, T.tamAlt * 0.120, "NOME :");
-        outtextxy(T.tamLarg * 0.385, T.tamAlt * 0.120, t[i].nomeTestemunha);        //Um vetor da struct testemunhas, usada para rotacionar os dados
+        outtextxy(T.tamLarg * 0.385, T.tamAlt * 0.120, test[i].nomeTestemunha);        //Um vetor da struct testemunhas, usada para rotacionar os dados
 
 
 // IDADE
         outtextxy(T.tamLarg * 0.323, T.tamAlt * 0.185, "IDADE :");
-        sprintf(idadeint, "%d", t[i].idade);                                        // Converte int para string
+        sprintf(idadeint, "%d", test[i].idade);                                        // Converte int para string
         outtextxy(T.tamLarg * 0.395, T.tamAlt * 0.185, idadeint);
 
 // ESTADO
         outtextxy(T.tamLarg * 0.323, T.tamAlt * 0.25, "CIDADE :");
-        outtextxy(T.tamLarg * 0.406, T.tamAlt * 0.25, t[i].cidadeEstado);          //Um vetor da struct suspeitos, usada para rotacionar os dados
+        outtextxy(T.tamLarg * 0.406, T.tamAlt * 0.25, test[i].cidadeEstado);          //Um vetor da struct suspeitos, usada para rotacionar os dados
 
 
 // CPF
         outtextxy(T.tamLarg * 0.323, T.tamAlt * 0.315, "CPF :");
-        outtextxy(T.tamLarg * 0.395, T.tamAlt * 0.315, t[i].cpf);                 //Um vetor da struct suspeitos, usada para rotacionar os dados
+        outtextxy(T.tamLarg * 0.395, T.tamAlt * 0.315, test[i].cpf);                 //Um vetor da struct suspeitos, usada para rotacionar os dados
 
 
 // TELEFONE
         outtextxy(T.tamLarg * 0.323, T.tamAlt * 0.38, "TEL :");
-        outtextxy(T.tamLarg * 0.395, T.tamAlt * 0.38, t[i].numeroTel);             //Um vetor da struct suspeitos, usada para rotacionar os dados
+        outtextxy(T.tamLarg * 0.395, T.tamAlt * 0.38, test[i].numeroTel);             //Um vetor da struct suspeitos, usada para rotacionar os dados
 
 
 // Número da ficha e ID
         outtextxy(T.tamLarg * 0.323, T.tamAlt * 0.435, "Numero da ficha :");
-        sprintf(numFichaint, "%d", t[i].numFicha);
+        sprintf(numFichaint, "%d", test[i].numFicha);
         outtextxy(T.tamLarg * 0.495, T.tamAlt * 0.435, numFichaint);
         outtextxy(T.tamLarg * 0.323, T.tamAlt * 0.5, "ID :");
-        sprintf(numIdint,"%d",t[i].id);
+        sprintf(numIdint,"%d",test[i].id);
         outtextxy(T.tamLarg * 0.385, T.tamAlt * 0.5, numIdint);
         outtextxy(T.tamLarg * 0.323, T.tamAlt * 0.574, "Delegacia civil-MG");
         rectangle(T.tamLarg * 0.323, T.tamAlt * 0.62, T.tamLarg * 0.71, T.tamAlt * 0.805);
@@ -345,7 +345,7 @@ void FichaTestemunhas(int alt)
             }
         }       //Deste jeito, mostraremos 2 linhas a cada loop do i, sem manipular a matriz dos char
         setcolor(0);
-        readimagefile(t[i].img, T.tamLarg * 0.6, T.tamAlt * 0.093, T.tamLarg * 0.74, T.tamAlt * 0.284); //Trecho de codigo reutilizado
+        readimagefile(test[i].img, T.tamLarg * 0.6, T.tamAlt * 0.093, T.tamLarg * 0.74, T.tamAlt * 0.284); //Trecho de codigo reutilizado
         setcolor(0);
         settextstyle(0,HORIZ_DIR,TamFonte2(alt));
         rectangle(T.tamLarg * 0.416, T.tamAlt * 0.833, T.tamLarg * 0.583, T.tamAlt * 0.88);

@@ -5,9 +5,11 @@ int telaResPolis(int alt, int larg);
 int ultimatelaPolis(int alt, int larg);
 void conversaDel(int alt, int larg, char conversa[2][85]);
 int telaLab(int alt, int larg);
-int telaEscolha(int alt, int larg);
+int telaEscolha(int alt, int larg,int SuspSel[3]);
+int TelaFinal(int alt, int larg, int Suspeitos[3]);
 void DesenhaBotaoEscolhas(int alt, int larg,float porcentLarg, float porcentAlt);
 void ClickBotaoEscolhas(int alt, int larg, int *IndSusp, int SuspSelecionados[3]);
+int SuspSel[3];
 int telaFinal9(int alt, int larg)
 {
     char perguntasdel[2][85]=
@@ -184,15 +186,16 @@ int telaLab(int alt, int larg)
     readimagefile("img/Digital.jpg",larg*0.82,alt*0.1,larg*0.92,alt*0.25);
     return BotaoeTeclas();
 }
-int telaEscolha(int alt, int larg)
+int telaEscolha(int alt, int larg,int SuspSel[3])
 {
-    int IndiceSuspeito=0, SuspSel[3],i;
+    int IndiceSuspeito=0,i;
     for(i=0;i<3;i++)
     {
         SuspSel[i]=0;
     }
     readimagefile("img/DelegaciaFinal.jpg",0,0,larg,alt);
     setfillstyle(SOLID_FILL,WHITE);
+    settextstyle(0,HORIZ_DIR,TamFonte2(alt));
     bar(larg*0.02,alt*0.17,larg*0.98,alt*0.88);
     rectangle(larg*0.047, alt*0.26, larg*0.219,alt*0.713);
     readimagefile("img/Suspeito1.jpg", larg*0.052, alt*0.278, larg*0.208, alt*0.648);
@@ -239,39 +242,41 @@ void ClickBotaoEscolhas(int alt, int larg, int *IndSusp, int SuspSelecionados[3]
     while(!fluxoLoop)
     {
         mx=mousex() , my=mousey();
+
         if(ismouseclick(WM_LBUTTONDOWN))
         {
+            setcolor(GREEN);
+            setlinestyle(0,0,8);
             if(mx>=larg*0.055 && mx<=larg*0.15&& my>=alt*0.75 && my<=alt*0.78)
             {
-                setcolor(BLUE);
                 rectangle(larg*0.047, alt*0.26, larg*0.219,alt*0.713);
                 SuspSelecionados[*IndSusp]=0;
+                (*IndSusp)++;
             }
             else if(mx>=larg*0.24 && mx<=larg*0.29&& my>=alt*0.75 && my<=alt*0.78)
             {
-                setcolor(BLUE);
                 rectangle(larg*0.24, alt*0.26, larg*0.407,alt*0.713);
                 SuspSelecionados[*IndSusp]=1;
+                (*IndSusp)++;
             }
             else if(mx>=larg*0.42 && mx<=larg*0.47&& my>=alt*0.75 && my<=alt*0.78)
             {
-                setcolor(BLUE);
                 rectangle(larg*0.42, alt*0.26,larg*0.572, alt*0.713);
                 SuspSelecionados[*IndSusp]=0;
+                (*IndSusp)++;
             }
             else if(mx>=larg*0.61 && mx<=larg*0.66&& my>=alt*0.75 && my<=alt*0.78)
             {
-                setcolor(BLUE);
                 rectangle(larg*0.598, alt*0.26, larg*0.765,alt*0.713);
                 SuspSelecionados[*IndSusp]=1;
+                (*IndSusp)++;
             }
             else if(mx>=larg*0.797 && mx<=larg*0.84 && my>=alt*0.75 && my<=alt*0.78)
             {
-                setcolor(BLUE);
                 rectangle(larg*0.787, alt*0.26, larg*0.968, alt*0.713);
                 SuspSelecionados[*IndSusp]=1;
+                (*IndSusp)++;
             }
-            (*IndSusp)++;
             fluxoLoop=1;
             clearmouseclick(WM_LBUTTONDOWN);
         }
@@ -281,5 +286,21 @@ void ClickBotaoEscolhas(int alt, int larg, int *IndSusp, int SuspSelecionados[3]
         O IndSusp, é o indice do suspeito escolhido, onde teremos 3, por ponteiro para parar a chamada da função
     */
     }
+
+}
+int TelaFinal(int alt, int larg, int Suspeitos[3])
+{
+    settextstyle(0,HORIZ_DIR,TamFonte2(alt));
+    bar(larg*0.028,alt*0.067,larg*0.75,alt*0.09);
+   if(Suspeitos[0]==1 && Suspeitos[0]==Suspeitos[1] && Suspeitos[0]==Suspeitos[2])
+   {
+       readimagefile("img/CenaFinal.jpg",0,0,larg,alt);
+        outtextxy(larg*0.03,alt*0.7,"Parabens Delegado, voce prendeu os suspeitos corretos!");
+   }
+   else
+   {
+       readimagefile("img/CenaRuim.jpg",0,0,larg,alt);
+        outtextxy(larg*0.03,alt*0.7,"Você foi demitido Delegado, prendeu inocentes do crime!");
+   }
 
 }

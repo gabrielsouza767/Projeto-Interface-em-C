@@ -18,7 +18,8 @@
 int main()
 {
     struct TamanhoTela T;  //Passado os campos da structs no arquivo .h
-    int retornoBotao=0,indiceTelas=0,tamfonte=0;;
+    int retornoBotao=0,indiceTelas=0,tamfonte=0;
+    extern int SuspSel[3];
     struct CoordenadasMouse C;
     C.x=0;
     C.y=0;
@@ -26,7 +27,7 @@ int main()
     initwindow(T.tamLarg,T.tamAlt,"FurtBanks",0,0);
     setbkcolor(15);
     cleardevice();
-    while (indiceTelas >= 0 && indiceTelas <= 14)    //Tratando as telas como indices,da primeira ate a ultima tela
+    while (indiceTelas >= 0 && indiceTelas <= 15)    //Tratando as telas como indices,da primeira ate a ultima tela
     {
         switch (indiceTelas)
         {
@@ -73,7 +74,10 @@ int main()
             retornoBotao=telaLab(T.tamAlt,T.tamLarg);
             break;
         case 14:
-            retornoBotao=telaEscolha(T.tamAlt, T.tamLarg);
+            retornoBotao=telaEscolha(T.tamAlt, T.tamLarg, SuspSel);
+            break;
+        case 15:
+            retornoBotao=TelaFinal(T.tamAlt,T.tamLarg,SuspSel);
         }
             if (retornoBotao)
                 indiceTelas++;  //Se o usuario clickou em vançar,essa incrementação faz com que mostre a proxima tela com os cases

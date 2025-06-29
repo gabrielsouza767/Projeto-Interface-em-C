@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1751168109 source:d:\faculdade\lab-aed1\projetointro\introducaojogo.cpp
+	<stdio.h>
+	<graphics.h>
+	"IntroducaoJogo.h"
+
+1751165039 d:\faculdade\lab-aed1\projetointro\introducaojogo.h
+
+1751165052 d:\faculdade\lab-aed1\projetointro\telainterrogatorio.h
+
+1751167533 d:\faculdade\lab-aed1\projetointro\finaldojogo.h
+
+1751168447 source:d:\faculdade\lab-aed1\projetointro\telainterrogatorio.cpp
+	<stdio.h>
+	<stdlib.h>
+	<graphics.h>
+	"IntroducaoJogo.h"
+	"TelaInterrogatorio.h"
+
+1751168129 source:d:\faculdade\lab-aed1\projetointro\finaldojogo.cpp
+	<stdio.h>
+	<graphics.h>
+	"IntroducaoJogo.h"
+	"FinaldoJogo.h"
+
+1751168142 source:d:\faculdade\lab-aed1\projetointro\projeto.cpp
+	<stdio.h>
+	<graphics.h>
+	"IntroducaoJogo.h"
+	"TelaInterrogatorio.h"
+	"FinaldoJogo.h"
+

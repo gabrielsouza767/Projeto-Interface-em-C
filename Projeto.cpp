@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <graphics.h>
 #include "IntroducaoJogo.h"
 #include "TelaInterrogatorio.h"
@@ -19,7 +18,6 @@ int main()
 {
     struct TamanhoTela T;  //Passado os campos da structs no arquivo .h
     int retornoBotao=0,indiceTelas=0,tamfonte=0;
-    extern int SuspSel[3];
     struct CoordenadasMouse C;
     C.x=0;
     C.y=0;
@@ -74,10 +72,10 @@ int main()
             retornoBotao=telaLab(T.tamAlt,T.tamLarg);
             break;
         case 14:
-            retornoBotao=telaEscolha(T.tamAlt, T.tamLarg, SuspSel);
+            retornoBotao=telaEscolha(T.tamAlt, T.tamLarg);
             break;
         case 15:
-            retornoBotao=TelaFinal(T.tamAlt,T.tamLarg,SuspSel);
+            retornoBotao=TelaFinal(T.tamAlt,T.tamLarg);
         }
             if (retornoBotao)
                 indiceTelas++;  //Se o usuario clickou em vançar,essa incrementação faz com que mostre a proxima tela com os cases

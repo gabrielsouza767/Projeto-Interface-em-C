@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="FinaldoJogo.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="18" topLine="0" />
+	</File>
+	<File name="FinaldoJogo.h" open="1" top="0" tabpos="3">
+		<Cursor position="549" topLine="0" />
+	</File>
+	<File name="IntroducaoJogo.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="18" topLine="384" />
+	</File>
+	<File name="IntroducaoJogo.h" open="1" top="0" tabpos="5">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="Projeto.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="18" topLine="50" />
+	</File>
+	<File name="TelaInterrogatorio.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="39" topLine="0" />
+	</File>
+	<File name="TelaInterrogatorio.h" open="1" top="0" tabpos="7">
+		<Cursor position="0" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>
